@@ -43,7 +43,7 @@ app.use(
   "/sb-admin-2",
   express.static(path.join(__dirname, "public/assets"))
 );
-
+app.use(cors());
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 // admin
